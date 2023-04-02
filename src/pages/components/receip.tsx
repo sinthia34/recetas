@@ -8,7 +8,7 @@ export type ReceipType = {
     status: string
   }
   
- export function Receip(props: ReceipType) {
+ export default function Receip(props: ReceipType) {
     const receip = props.receip
     const status = props.status
 

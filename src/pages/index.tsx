@@ -1,5 +1,4 @@
 import Head from "next/head";
-import { Inter } from 'next/font/google'
 
 import {
   NextUIProvider,
@@ -14,9 +13,7 @@ import {
 
 import { apiGetReceip } from "../application/apiGetReceip";
 import { useState } from "react";
-import { Receip } from "./components/receip";
-
-const mainFont = Inter({ weight: ["400"], subsets: ["latin"] })
+import Receip from "./components/receip";
 
 export default function Home() {
   const [status, setStatus] = useState("");
@@ -43,7 +40,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={mainFont.className}>
+      <main>
         <NextUIProvider>
           <Image
             width="100%"
