@@ -54,25 +54,49 @@ export default function Home() {
             css={{ minHeight: "100%", maxWidth: "80%" }}
           >
             <Row justify="flex-start" align="center" css={{'flex-direction': "column"}}>
-              <Text h1 size={50} css={{ 'padding-top': "5rem", 'padding-bottom': "2rem" }}>
+              <Text
+                size={50}
+                css={{ 
+                  'font-size': '2rem',
+                  'padding-top': "5rem",
+                  'padding-bottom': "2rem",
+                  '@xs': {
+                    'font-size': '3rem'
+                  }  
+                }}>
                 Añadir ingredientes para la receta
               </Text>
               <Grid.Container
                 gap={1}
                 justify="center"
                 css={{
-                  "padding-left": "1.5rem",
-                  width: "60%",
+                  width: "100%",
+                  '@xs': {
+                    "padding-left": "1.5rem",
+                    width: "60%"
+                  },  
                 }}
               >
-                <Grid css={{ width: "70%" }}>
+                <Grid css={{ 
+                  'width': '100%',
+                  '@xs': {
+                    'width': '70%'
+                  }
+                }}>
                   <Input
                     placeholder="Ingredientes"
                     css={{ width: "100%" }}
                     onChange={changeIngredients}
                   ></Input>
                 </Grid>
-                <Grid css={{ width: "30%" }}>
+                <Grid 
+                  css={{ 
+                    width: "100%", 
+                    '@xs': {
+                      'width': '30%'
+                    }                    
+                  }}
+                >
                   <Button onClick={createReceip} css={{ width: "100%" }}>
                     Crear receta
                   </Button>
